@@ -10,6 +10,14 @@ if(!Loader::includeModule("iblock"))
 	return;
 }
 
+$this->AddIncludeAreaIcon(
+    array(
+        'URL'   => $APPLICATION->GetCurPageParam("hello=world", array("hello")) ,
+        'TITLE' => "Hello world",
+        "IN_PARAMS_MENU" => true,
+    )
+);
+
 if ($arParams["PRODUCTS_IBLOCK_ID"] && $arParams["ALT_IBLOCK_ID"] && $arParams["CODE"] ) {
     $arResult = array();
     if ($this->StartResultCache()) {
